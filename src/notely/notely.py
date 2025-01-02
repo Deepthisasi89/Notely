@@ -1,4 +1,6 @@
 """notely is a note taking application currently with 2 helper functions for setup."""
+from notely.note import Note
+import uuid
 
 
 def get_title() -> str:
@@ -15,3 +17,14 @@ def get_note() -> str:
     Returns: Note Body
     """
     return "Note Body"
+
+
+def create_note() -> Note:
+    return Note(
+        ID=str(uuid.uuid4()),
+        body="body",
+        title="title"
+    )
+
+
+
